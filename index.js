@@ -14,7 +14,7 @@ let io = require("socket.io")(http, {
 });
 const axios = require('axios')
 
-const SecretKey = "BloxpopUp0888154";
+const SecretKey = "";
 
 var connectedUsers = 0;
 var messages = [];
@@ -91,7 +91,7 @@ var user_spam = {};
 io.on('connection', function(socket) {
   socket.on('authenticate', function(key) {
     axios
-      .post('https://bloxluck.com/php/getdata', {
+      .post('', {
         SecretKey: SecretKey,
         UserKey: key
       })
